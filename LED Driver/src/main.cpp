@@ -8,14 +8,28 @@ TODO:
 * Calibrate min/max values for potmeters
 */
 
-// TODO: define relevant constants
+constexpr int Analog1{A0};
+constexpr int Analog2{A1};
+constexpr int Analog3{A2};
+constexpr int RandomSeedPin{A3}; // Unconnected
+
+constexpr int Rd{3}; //TODO: Check if connection are soldered correctly
+constexpr int Gr{5};
+constexpr int Bl{6};
+
+//PWM pins: 3,5,6,9,10,11
 
 void setup()
 {
-  // put your setup code here, to run once:
+  pinMode(Rd, OUTPUT);
+  pinMode(Gr, OUTPUT);
+  pinMode(Bl, OUTPUT);
 }
 
 void loop()
 {
-  // put your main code here, to run repeatedly:
+  digitalWrite(Rd, LOW);
+  delay(250);
+  digitalWrite(Rd, HIGH);
+  delay(250);
 }
